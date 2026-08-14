@@ -7,7 +7,11 @@
  *    ONECOMPILER_PROJECT_ID. Vacío también funciona: se abre el editor
  *    general y se carga final.cpp mediante postMessage.
  */
-const ONECOMPILER_PROJECT_ID = "";
+const ONECOMPILER_PROJECT_ID = "44y8vp8ga";
+
+function getOneCompilerUrl() {
+    return `https://onecompiler.com/embed/cpp/${ONECOMPILER_PROJECT_ID}?hideNew=true&theme=dark`;
+}
 const WALTER_VIDEO_PATH = "assets/video/walter-autocheck.mp4";
 
 const nav = document.querySelector(".main-nav");
