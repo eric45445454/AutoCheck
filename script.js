@@ -113,16 +113,7 @@ const loadCodeButton = document.getElementById("load-code");
 const retryCompilerButton = document.getElementById("retry-compiler");
 let compilerTimeout;
 
-function getOneCompilerUrl() {
-  const projectId = ONECOMPILER_PROJECT_ID.trim();
-  // El editor genérico/C++ embebido presenta actualmente un fallo de inicio en
-  // algunos navegadores. La plantilla Python inicia de forma estable y el evento
-  // populateCode cambia inmediatamente el editor a C++ al cargar AutoCheck.
-  const projectSegment = projectId ? `/cpp/${encodeURIComponent(projectId)}` : "/python";
-  // Usamos solo los parámetros esenciales documentados. La combinación de
-  // opciones visuales adicionales puede impedir que el editor embebido inicie.
-  return `https://onecompiler.com/embed${projectSegment}?codeChangeEvent=true&listenToEvents=true&hideNew=true`;
-}
+
 
 function populateAutoCheck() {
   if (!(compilerFrame instanceof HTMLIFrameElement)) return;
